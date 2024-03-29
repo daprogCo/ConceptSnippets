@@ -1,9 +1,18 @@
 """
 ### Binary Search ###
 
-Binary search is a divide-and-conquer algorithm that select the middle element of a sorted array and compares it to the target value. If the target value is less than the middle element, the algorithm searches the left subarray. If the target value is greater than the middle element, the algorithm searches the right subarray. If the target value is equal to the middle element, the algorithm returns the index of the middle element. The algorithm continues this process until the target value is found or the subarray is empty.
+Binary search is a divide-and-conquer algorithm that select the middle element
+of a sorted array and compares it to the target value. If the target value is
+less than the middle element, the algorithm searches the left subarray. If the
+target value is greater than the middle element, the algorithm searches the
+right subarray. If the target value is equal to the middle element, the
+algorithm returns the index of the middle element. The algorithm continues 
+this process until the target value is found or the subarray is empty.
 
-This algorithm is a very efficient way to search for a target value in a sorted array. For example, an array of 1,000,000 elements can be searched in just 20 steps using binary search, compared to 1,000,000 steps using a linear search (which searches each element in the array one by one).
+This algorithm is a very efficient way to search for a target value in a sorted
+array. For example, an array of 1,000,000 elements can be searched in just 20
+steps using binary search, compared to 1,000,000 steps using a linear searh
+(which searches each element in the array one by one).
 
 Complexity: O(logn)
 """
@@ -11,7 +20,8 @@ Complexity: O(logn)
 def binary_search(collection, target):
   first = 0
   last = len(collection) - 1
-  # We iterate over the subarray until the first index is less than or equal to the last index
+  # We iterate over the subarray until the first index is less than 
+  # or equal to the last index
   while first <= last:
     midpoint = (first + last) // 2
     if collection[midpoint] == target:
