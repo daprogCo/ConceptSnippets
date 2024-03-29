@@ -1,15 +1,25 @@
 """
 ### Example of the state pattern in Python ###
 
-The state pattern is a behavioral design pattern that allows an object to change its behavior when its internal state changes. It defines a family of algorithms, encapsulates each algorithm, and makes the algorithms interchangeable within that family.
+The state pattern is a behavioral design pattern that allows an object to change
+its behavior when its internal state changes. It defines a family of algorithms,
+encapsulates each algorithm, and makes the algorithms interchangeable 
+within that family.
 
-It's pretty similar to the strategy pattern, but the difference is that the strategy pattern is used to switch between different algorithms, while the state pattern is used to switch between different states of a single algorithm.
+It's pretty similar to the strategy pattern, but the difference is that the
+strategy pattern is used to switch between different algorithms, while the state
+pattern is used to switch between different states of a single algorithm.
 
-To implement the State Pattern, we require a context manager that furnishes an interface for state transitions. Internally, this manager maintains a reference to the current state.
+To implement the State Pattern, we require a context manager that furnishes
+an interface for state transitions. Internally, this manager maintains
+a reference to the current state.
 
-It is useful when an object's behavior depends on its state and must change dynamically depending on that state.
+It is useful when an object's behavior depends on its state and must change
+dynamically depending on that state.
 """
-# abc is a module that provides the infrastructure for defining Abstract Base Classes in Python more details can be found at https://docs.python.org/3/library/abc.html (PEP 3119)
+# abc is a module that provides the infrastructure for defining Abstract Base
+# Classes in Python more details can be found 
+# at https://docs.python.org/3/library/abc.html (PEP 3119)
 
 from abc import ABC, abstractmethod
 
@@ -19,7 +29,8 @@ class State(ABC):
     def handle(self):
         pass
 
-# Child classes of State that are concrete states with different behaviors that can be encapsulated in the context manager
+# Child classes of State that are concrete states with different behaviors
+# that can be encapsulated in the context manager
 class LowercaseState(State):
     def handle(self):
         return "lowercase"

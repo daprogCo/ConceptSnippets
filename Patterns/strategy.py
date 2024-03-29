@@ -1,15 +1,26 @@
 """
 ### Example of the strategy pattern in Python ###
 
-The strategy pattern is a behavioral design pattern that enables selecting an algorithm at runtime. It defines a family of algorithms, encapsulates each algorithm, and makes the algorithms interchangeable within that family.
+The strategy pattern is a behavioral design pattern that enables selecting
+an algorithm at runtime. It defines a family of algorithms, encapsulates each
+algorithm, and makes the algorithms interchangeable within that family.
 
-Interfaces or abstract classes are used to define the strategy, and concrete classes implement the strategy. The client can choose the appropriate strategy and use it without knowing the implementation details.
+Interfaces or abstract classes are used to define the strategy, and concrete
+classes implement the strategy. The client can choose the appropriate strategy
+and use it without knowing the implementation details.
 
-In this example, we have a `Sorter` class that uses a `SortStrategy` interface to sort a collection of elements. The `SortStrategy` interface defines a `sort` method that must be implemented by concrete strategies such as `QuickSortStrategy` and `MergeSortStrategy`. The `Sorter` class can use any of these strategies to sort the collection of elements.
+In this example, we have a `Sorter` class that uses a `SortStrategy` interface
+to sort a collection of elements. The `SortStrategy` interface defines a `sort`
+method that must be implemented by concrete strategies such as
+`QuickSortStrategy` and `MergeSortStrategy`. The `Sorter` class can use any
+of these strategies to sort the collection of elements.
 
-The strategy pattern is useful when you want to switch between different algorithms at runtime or when you want to isolate the algorithm implementation from the client code.
+The strategy pattern is useful when you want to switch between different
+algorithms at runtime or when you want to isolate the algorithm implementation
+from the client code.
 """
-# abc is a module that provides the infrastructure for defining Abstract Base Classes in Python more details can be found at https://docs.python.org/3/library/abc.html (PEP 3119)
+# abc is a module that provides the infrastructure for defining Abstract Base
+# Classes in Python more details can be found at https://docs.python.org/3/library/abc.html (PEP 3119)
 
 from abc import ABC, abstractmethod
 
@@ -23,14 +34,16 @@ class SortStrategy(ABC):
 class QuickSortStrategy(SortStrategy):
     def sort(self, collection):
         # Implement Quick Sort algorithm
-        # This is just a placeholder, the actual implementation is not provided here and I used the built-in sorted function for simplicity
+        # This is just a placeholder, the actual implementation is not provided
+        # here and I used the built-in sorted function for simplicity
         print("Using Quick Sort algorithm")
         return sorted(collection)
 
 class MergeSortStrategy(SortStrategy):
     def sort(self, collection):
         # Implement Merge Sort algorithm
-        # This is just a placeholder, the actual implementation is not provided here and I used the built-in sorted function for simplicity
+        # This is just a placeholder, the actual implementation is not provided
+        # here and I used the built-in sorted function for simplicity
         print("Using Merge Sort algorithm")
         return sorted(collection)
 

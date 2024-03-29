@@ -1,11 +1,14 @@
 """
 ### Example of using caching in Python ###
 
-This script demonstrates how to cache the results of a function using the cachetools library.
+This script demonstrates how to cache the results of a function using the
+cachetools library.
 
-In this example, we create a simple weather API client that fetches weather data for a given city using the wttr.in API.
+In this example, we create a simple weather API client that fetches weather data
+for a given city using the wttr.in API.
 
-We use the cachetools library to cache the results of the API calls for a certain amount of time to avoid making redundant API calls.
+We use the cachetools library to cache the results of the API calls 
+for a certain amount of time to avoid making redundant API calls.
 """
 import requests
 from cachetools import cached, TTLCache
