@@ -20,8 +20,6 @@ Complexity: O(logn)
 def binary_search(collection, target):
   first = 0
   last = len(collection) - 1
-  # We iterate over the subarray until the first index is less than 
-  # or equal to the last index
   while first <= last:
     midpoint = (first + last) // 2
     if collection[midpoint] == target:
@@ -33,12 +31,10 @@ def binary_search(collection, target):
   return -1
 
 if __name__ == "__main__":
-  # Read the input
   # Example: 5 _> 1 5 8 12 13 _> 8
   n = int(input())
   collection = list(map(int, input().split()))
   target = int(input())
-  # Print the result
-  # Example: 2
+  # Result: 2
   print(binary_search(collection, target))
   
